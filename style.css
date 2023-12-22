@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+.rectangle {
+    width: 100px;
+    height: 60px;
+    margin-right: 20px; /* Để các khối vuông cách nhau */
+    background-color: #7CB9E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 1px solid #000;
+    border-radius: 10%;
+    transition: box-shadow 0.3s ease;
+}
+
+.rectangle.moveUp {
+    animation: moveUp 1s ease-out forwards;
+    box-shadow: 0 0 20px #72A0C1;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #00308F;
+  }
+
+.rectangle.moveDown {
+    animation: moveDown 1s ease-out forwards;
+    box-shadow: 0 0 20px #72A0C1;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #00308F;
+}
+
+@keyframes moveUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100px);
+    }
+  }
+
+@keyframes moveDown {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100px);
+    }
+  }
